@@ -2,12 +2,12 @@
 import SwiftUI
 public struct TaskOne: View {
     var title:String
-    var ditels:String
+    var details:String
     var Laction:() -> Void
     var Raction:() -> Void
-    public init(title: String, ditels: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
+    public init(title: String, details: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
         self.title = title
-        self.ditels = ditels
+        self.details = details
         self.Laction = Laction
         self.Raction = Raction
     }
@@ -15,7 +15,7 @@ public struct TaskOne: View {
         HStack{
             VStack(alignment:.leading,spacing:5){
                 Text(title).bold().font(.title3)
-                Text(ditels).font(.caption2)
+                Text(details).font(.caption2)
             }
             .foregroundStyle(.gray)
             Spacer()
